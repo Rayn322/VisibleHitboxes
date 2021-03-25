@@ -1,0 +1,10 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<vertical child-control-height='false'>
+		<horizontal bg='panel-top' pad-left='8' pad-right='8' horizontal-fit='PreferredSize'>
+			<text text='Toggle Mod' align='Center' font-size='8'></text>
+		</horizontal>
+		<horizontal bg='round-rect-panel' vertical-fit='MinSize' horizontal-fit='MinSize' min-width='80' min-height='20' pad='6'>
+			<toggle-setting text='Enable Mod' on-change='setEnabled' value='enabled' bind-value='true'></toggle-setting>
+		</horizontal>
+	</vertical>
+</bg>
