@@ -2,7 +2,6 @@
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
-
 namespace VisibleHitboxes {
 
     internal class Config {
