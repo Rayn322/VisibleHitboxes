@@ -1,7 +1,7 @@
 ﻿{
     "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
     "id": "VisibleHitboxes",
-    "name": "Visible Hitboxes",
+    "name": "VisibleHitboxes",
     "author": "Ryan",
     "version": "1.0.0",
     "description": "Make block and saber hitboxes visible for those who are curious to see how the new modifiers work.",

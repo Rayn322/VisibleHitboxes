@@ -29,8 +29,9 @@ namespace VisibleHitboxes.UI {
         public void Awake() {
             instance = this;
 
-            if (settingsView == null)
+            if (settingsView == null) {
                 settingsView = BeatSaberUI.CreateViewController<SettingsMenuViewController>();
+            }
         }
 
         protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling) {

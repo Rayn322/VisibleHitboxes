@@ -112,7 +112,6 @@
     <Compile Include="Config.cs" />
     <Compile Include="Patches\BoxCuttableBySaberPatch.cs" />
     <Compile Include="Plugin.cs" />
-    <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="UI\MenuButtonManager.cs" />
     <Compile Include="UI\SettingsMenuViewController.cs" />
     <Compile Include="VisibleHitboxesController.cs" />
