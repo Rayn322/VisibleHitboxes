@@ -7,11 +7,11 @@ namespace VisibleHitboxes.UI {
     internal class SettingsMenuViewController : BSMLResourceViewController {
         public override string ResourceName => "VisibleHitboxes.UI.Views.SettingsMenu.bsml";
 
-        // sets the slider to the correct position when opening
+        // sets the toggle to the correct position when opening
         [UIValue("enabled")]
-        private bool modToggle = Config.Instance.IsEnabled;
+        private bool ModToggle = Config.Instance.IsEnabled;
 
-        // sets the value when the slider is changed
+        // sets the value when the toggle is changed
         [UIAction("setEnabled")]
         private void SetEnabled(bool value) {
             Config.Instance.IsEnabled = value;
@@ -21,6 +21,16 @@ namespace VisibleHitboxes.UI {
             } else {
                 ScoreSubmission.RemoveProlongedDisable(Plugin.modName);
             }
+        }
+
+        [UIValue("opacity")]
+        private float opacity = Config.Instance.Opacity;
+
+        [UIAction("setOpacity")]
+        private void SetOpcaity(float value) {
+            Config.Instance.Opacity = value;
+
+            Plugin.CreateMaterial();
         }
     }
 }

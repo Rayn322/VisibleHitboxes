@@ -111,6 +111,7 @@
   <ItemGroup>
     <Compile Include="Config.cs" />
     <Compile Include="Patches\BoxCuttableBySaberPatch.cs" />
+    <Compile Include="Patches\SaberPatch.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="UI\MenuButtonManager.cs" />
     <Compile Include="UI\SettingsMenuViewController.cs" />

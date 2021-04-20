@@ -12,16 +12,13 @@ namespace VisibleHitboxes.Patches {
             }
 
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cube.name = "VisibleCollider";
-            cube.transform.parent = __instance.transform;
+            cube.name = "VisibleCubeCollider";
+            cube.transform.SetParent(__instance.transform, false);
             cube.transform.localScale = __instance.colliderSize;
-
             cube.transform.position = new Vector3(0, 1, 0);
-
-            MeshRenderer meshRenderer = cube.GetComponent<MeshRenderer>();
-            // Silhouette-Outlined Diffuse
-
             cube.GetComponent<MeshRenderer>().material = Plugin.hitboxMaterial;
+
+            // Silhouette-Outlined Diffuse
         }
     }
 }

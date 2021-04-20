@@ -57,15 +57,15 @@ namespace VisibleHitboxes {
             ScoreSubmission.RemoveProlongedDisable(modName);
         }
 
-        private void CreateCubeMesh() {
+        internal static void CreateCubeMesh() {
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cubeMesh = cube.GetComponent<MeshFilter>().mesh;
         }
 
-        private void CreateMaterial() {
+        internal static void CreateMaterial() {
             hitboxMaterial = new Material(Shader.Find("Legacy Shaders/Transparent/VertexLit"));
             // Legacy Shaders/Transparent/VertexLit
-            hitboxMaterial.color = new Color(255, 255, 255, 0.5f);
+            hitboxMaterial.color = new Color(255, 255, 255, Config.Instance.Opacity);
         }
     }
 }
