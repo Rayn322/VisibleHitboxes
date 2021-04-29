@@ -1,8 +1,4 @@
 ﻿using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace VisibleHitboxes.Patches {
@@ -10,7 +6,7 @@ namespace VisibleHitboxes.Patches {
     [HarmonyPatch(typeof(SaberManager), "RefreshSabers", MethodType.Normal)]
     public class SaberPatch {
 
-        static void Postfix(SaberManager __instance, ref Saber ____leftSaber, ref Saber ____rightSaber) {
+        private static void Postfix(SaberManager __instance, ref Saber ____leftSaber, ref Saber ____rightSaber) {
             if (!Config.Instance.IsEnabled) {
                 return;
             }
@@ -20,7 +16,6 @@ namespace VisibleHitboxes.Patches {
             Saber[] sabers = { ____leftSaber, ____rightSaber };
 
             foreach (Saber saber in sabers) {
-
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.name = "VisibleSaberCollider";
                 cube.transform.SetParent(saber.transform, false);

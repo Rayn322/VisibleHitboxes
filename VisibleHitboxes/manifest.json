@@ -5,7 +5,7 @@
     "author": "Ryan",
     "version": "1.0.0",
     "description": "Make block and saber hitboxes visible for those who are curious to see how the new modifiers work.",
-    "gameVersion": "1.14.0",
+    "gameVersion": "1.15.0",
     "dependsOn": {
         "BSIPA": "^4.1.4",
         "BeatSaberMarkupLanguage": "^1.5.2",
